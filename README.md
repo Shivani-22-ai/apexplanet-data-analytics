@@ -25,7 +25,7 @@ The objective of Task 1 was to perform data cleaning and exploratory data analys
 ```text
 ## Project Structure
 
-```text
+
 apexplanet-data-analytics/
 │
 ├── data/
