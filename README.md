@@ -2,173 +2,226 @@
 
 ## Overview
 
-This repository contains the projects completed as part of the **ApexPlanet Data Analytics Internship Program**.
-
-The internship focuses on data cleaning, exploratory data analysis, SQL-based business analysis, dashboarding, statistical analysis, and machine learning fundamentals.
+This repository contains projects completed as part of the ApexPlanet Data Analytics Internship Program. The work focuses on data cleaning, exploratory data analysis, SQL-based business analysis, data visualization, and dashboard development using real-world customer churn data.
 
 ---
 
-# Repository Structure
+## Repository Structure
 
-```text
 apexplanet-data-analytics/
-│
+
 ├── data/
-│   ├── raw/
-│   │   └── telco_churn.xlsx
-│   │
-│   ├── processed/
-│   │   └── telco_cleaned.csv
-│   │
-│   └── telco.db
-│
+
+│ ├── raw/
+
+│ ├── processed/
+
+│ └── telco.db
+
 ├── notebooks/
-│   ├── 01_EDA.ipynb
-│   └── 02_SQL_Analysis.ipynb
-│
+
+│ ├── 01_EDA.ipynb
+
+│ ├── 02_SQL_Analysis.ipynb
+
+│ └── 03_Visualizations.ipynb
+
+├── dashboards/
+
+│ └── telco_dashboard.pbix
+
 ├── scripts/
-│   └── db_utils.py
-│
+
+│ └── db_utils.py
+
 ├── sql/
-│   └── churn_queries.sql
-│
+
+│ └── churn_queries.sql
+
+├── visualizations/
+
+│ ├── *.png
+
+│ └── *.html
+
+├── reports/
+
 └── README.md
-```
 
 ---
 
-# Dataset
+## Dataset
 
-**IBM Telco Customer Churn Dataset**
+IBM Telco Customer Churn Dataset
 
 * 7043 customer records
 * Customer demographics
-* Subscription details
+* Service subscriptions
 * Billing information
-* Churn information
+* Customer churn details
 * Customer Lifetime Value (CLTV)
 
 ---
 
-# Task 1: Data Cleaning & Exploratory Data Analysis
+# Task 1: Data Cleaning and Exploratory Data Analysis
 
-## Objectives
+### Objectives
 
 * Data cleaning and preprocessing
 * Missing value handling
-* Data type correction
-* Outlier detection using IQR
+* Data type conversion
+* Outlier detection
 * Exploratory Data Analysis (EDA)
 
-## Analysis Performed
+### Analysis Performed
 
-### Data Cleaning
-
-* Handled missing values
-* Checked duplicate records
-* Corrected data types
-* Performed outlier analysis
-* Exported cleaned dataset
-
-### Exploratory Data Analysis
-
-* Statistical summary
+* Dataset inspection and summary statistics
+* Missing value treatment
+* Duplicate record verification
+* Data type corrections
+* Outlier analysis using IQR
 * Histograms and boxplots
-* Bar chart analysis
-* Correlation heatmap
-* Trend analysis
+* Correlation analysis
 
 ### Key Insights
 
 * Average customer tenure is approximately 32 months.
-* Month-to-month contracts are the most common subscription type.
+* Average monthly charge is approximately 64.76.
+* Month-to-month contracts are the most common contract type.
 * Electronic check is the most frequently used payment method.
 * Tenure and Total Charges show a strong positive correlation.
-* Long-term customers contribute higher customer lifetime value.
 
 ---
 
-# Task 2: SQL for Data Extraction
+# Task 2: SQL for Data Extraction and Analysis
 
-## Objectives
+### Objectives
 
 * Learn SQL fundamentals
-* Perform business analysis using SQL
+* Perform business-oriented data analysis
 * Integrate SQL with Python
-* Build reusable SQL workflows
+* Create reusable SQL workflows
 
-## SQL Concepts Covered
-
-### Fundamentals
+### SQL Concepts Used
 
 * SELECT
 * WHERE
 * ORDER BY
-* LIMIT
 * GROUP BY
 * HAVING
-
-### Advanced SQL
-
 * Common Table Expressions (CTEs)
 * ROW_NUMBER()
 * RANK()
 * Views
 
-### Python + SQL Integration
-
-* SQLite database creation
-* Query execution using pandas.read_sql()
-* Reusable database utility script
-
-## Business Questions Answered
+### Business Questions Answered
 
 * Total customers
 * Churned customers
 * Average monthly charges
 * Contract distribution
-* Payment method analysis
-* Average tenure by churn status
-* CLTV by contract type
-* Top customer cities
-* Internet service distribution
-* Contract-wise churn rate
+* Payment method distribution
+* CLTV analysis
+* Customer city analysis
+* Churn rate by contract type
 
-## Key Findings
+### Key Findings
 
-* Month-to-month contracts exhibit the highest churn rate.
-* Customers with longer tenure generate higher total revenue.
-* Long-term contracts show stronger customer retention.
-* Electronic check is the most common payment method.
-* Customer lifetime value increases with retention duration.
+* Month-to-month contracts have the highest churn rate.
+* Long-term customers generate higher revenue and CLTV.
+* Customer retention improves significantly with longer contracts.
 
 ---
 
-# Technologies Used
+# Task 3: Data Visualization and Dashboarding
+
+### Objectives
+
+* Create professional visualizations using Python
+* Develop interactive charts using Plotly
+* Build an interactive Power BI dashboard
+
+### Tools Used
+
+* Matplotlib
+* Seaborn
+* Plotly
+* Power BI
+
+### Visualizations Created
+
+#### Matplotlib
+
+* Monthly Charges Distribution
+* Contract Distribution
+* Tenure vs Total Charges
+* Average CLTV by Tenure
+
+#### Seaborn
+
+* Correlation Heatmap
+* Monthly Charges by Churn Status
+* Pairplot Analysis
+
+#### Plotly
+
+* Interactive Contract Distribution
+* Interactive Churn Distribution
+
+### Dashboard Features
+
+* KPI Cards
+
+  * Total Customers
+  * Churned Customers
+  * Average Monthly Charges
+  * Average CLTV
+
+* Contract Distribution Analysis
+
+* Churn by Contract Type
+
+* Payment Method Distribution
+
+* Internet Service Distribution
+
+* Top Customer Cities
+
+* Interactive Filters (Slicers)
+
+### Key Insights
+
+* Month-to-month customers exhibit the highest churn rates.
+* Fiber optic customers form the largest internet service segment.
+* Customer retention is strongly associated with contract duration.
+* Major cities contribute a significant share of the customer base.
+
+---
+
+## Technologies Used
 
 * Python
 * Pandas
 * NumPy
 * Matplotlib
 * Seaborn
+* Plotly
 * SQLite
 * SQL
+* Power BI
 * Jupyter Notebook
 
 ---
 
-# Internship Program
+## Internship Progress
 
-ApexPlanet Software Pvt. Ltd.
+### Completed
 
-Completed Tasks:
+* Task 1 – Data Cleaning and Exploratory Data Analysis
+* Task 2 – SQL for Data Extraction and Analysis
+* Task 3 – Data Visualization and Dashboarding
 
-* Task 1 – Foundational Setup & Exploratory Data Analysis
-* Task 2 – SQL for Data Extraction
+### Upcoming
 
-Upcoming:
-
-* Task 3 – Data Visualization & Dashboarding
-* Task 4 – Advanced Analytics & Machine Learning
-* Task 5 – Final Report & Automation
-
+* Task 4 – Advanced Analytics and Machine Learning
+* Task 5 – Final Report and Automation
