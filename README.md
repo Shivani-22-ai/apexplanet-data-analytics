@@ -2,57 +2,45 @@
 
 ## Overview
 
-This repository contains projects completed as part of the ApexPlanet Data Analytics Internship Program. The work focuses on data cleaning, exploratory data analysis, SQL-based business analysis, data visualization, and dashboard development using real-world customer churn data.
+This repository contains projects completed as part of the ApexPlanet Data Analytics Internship Program. The work covers data cleaning, exploratory data analysis, SQL-based business analysis, visualization, dashboard development, statistical analysis, customer segmentation, and machine learning using the IBM Telco Customer Churn dataset.
 
 ---
 
 ## Repository Structure
 
+```text
 apexplanet-data-analytics/
-
+│
 ├── data/
-
-│ ├── raw/
-
-│ ├── processed/
-
-│ └── telco.db
-
+│   ├── raw/
+│   ├── processed/
+│   └── telco.db
+│
 ├── notebooks/
-
-│ ├── 01_EDA.ipynb
-
-│ ├── 02_SQL_Analysis.ipynb
-
-│ └── 03_Visualizations.ipynb
-
+│   ├── 01_EDA.ipynb
+│   ├── 02_SQL_Analysis.ipynb
+│   ├── 03_Visualizations.ipynb
+│   └── 04_Advanced_Analytics.ipynb
+│
 ├── dashboards/
-
-│ └── telco_dashboard.pbix
-
+│   └── telco_dashboard.pbix
+│
 ├── scripts/
-
-│ └── db_utils.py
-
+│   └── db_utils.py
+│
 ├── sql/
-
-│ └── churn_queries.sql
-
+│   └── churn_queries.sql
+│
 ├── visualizations/
-
-│ ├── *.png
-
-│ └── *.html
-
-├── reports/
-
+│
 └── README.md
+```
 
 ---
 
 ## Dataset
 
-IBM Telco Customer Churn Dataset
+**IBM Telco Customer Churn Dataset**
 
 * 7043 customer records
 * Customer demographics
@@ -63,24 +51,17 @@ IBM Telco Customer Churn Dataset
 
 ---
 
-# Task 1: Data Cleaning and Exploratory Data Analysis
+# Task 1: Data Cleaning & Exploratory Data Analysis
 
-### Objectives
+### Activities Performed
 
-* Data cleaning and preprocessing
-* Missing value handling
-* Data type conversion
-* Outlier detection
-* Exploratory Data Analysis (EDA)
-
-### Analysis Performed
-
-* Dataset inspection and summary statistics
+* Data inspection and quality assessment
 * Missing value treatment
-* Duplicate record verification
-* Data type corrections
+* Data type conversion
+* Duplicate verification
 * Outlier analysis using IQR
-* Histograms and boxplots
+* Statistical summaries
+* Univariate and bivariate analysis
 * Correlation analysis
 
 ### Key Insights
@@ -95,12 +76,13 @@ IBM Telco Customer Churn Dataset
 
 # Task 2: SQL for Data Extraction and Analysis
 
-### Objectives
+### Activities Performed
 
-* Learn SQL fundamentals
-* Perform business-oriented data analysis
-* Integrate SQL with Python
-* Create reusable SQL workflows
+* Database creation using SQLite
+* SQL query development
+* Data aggregation and filtering
+* View creation
+* SQL-Python integration
 
 ### SQL Concepts Used
 
@@ -109,21 +91,8 @@ IBM Telco Customer Churn Dataset
 * ORDER BY
 * GROUP BY
 * HAVING
-* Common Table Expressions (CTEs)
-* ROW_NUMBER()
-* RANK()
 * Views
-
-### Business Questions Answered
-
-* Total customers
-* Churned customers
-* Average monthly charges
-* Contract distribution
-* Payment method distribution
-* CLTV analysis
-* Customer city analysis
-* Churn rate by contract type
+* Aggregate Functions
 
 ### Key Findings
 
@@ -135,12 +104,6 @@ IBM Telco Customer Churn Dataset
 
 # Task 3: Data Visualization and Dashboarding
 
-### Objectives
-
-* Create professional visualizations using Python
-* Develop interactive charts using Plotly
-* Build an interactive Power BI dashboard
-
 ### Tools Used
 
 * Matplotlib
@@ -150,51 +113,74 @@ IBM Telco Customer Churn Dataset
 
 ### Visualizations Created
 
-#### Matplotlib
-
-* Monthly Charges Distribution
-* Contract Distribution
-* Tenure vs Total Charges
-* Average CLTV by Tenure
-
-#### Seaborn
-
-* Correlation Heatmap
-* Monthly Charges by Churn Status
-* Pairplot Analysis
-
-#### Plotly
-
-* Interactive Contract Distribution
-* Interactive Churn Distribution
+* Histograms
+* Boxplots
+* Correlation Heatmaps
+* Pairplots
+* Interactive Plotly Charts
+* Power BI Dashboard
 
 ### Dashboard Features
 
-* KPI Cards
-
-  * Total Customers
-  * Churned Customers
-  * Average Monthly Charges
-  * Average CLTV
-
+* Total Customers KPI
+* Churned Customers KPI
+* Average Monthly Charges KPI
+* Average CLTV KPI
 * Contract Distribution Analysis
-
 * Churn by Contract Type
-
 * Payment Method Distribution
-
 * Internet Service Distribution
-
 * Top Customer Cities
-
-* Interactive Filters (Slicers)
+* Interactive Slicers
 
 ### Key Insights
 
-* Month-to-month customers exhibit the highest churn rates.
-* Fiber optic customers form the largest internet service segment.
-* Customer retention is strongly associated with contract duration.
-* Major cities contribute a significant share of the customer base.
+* Month-to-month customers show the highest churn behavior.
+* Fiber optic service has the largest customer base.
+* Contract duration strongly influences customer retention.
+
+---
+
+# Task 4: Advanced Analytics & Predictive Modeling
+
+### Statistical Analysis
+
+* Descriptive Statistics
+* Mean, Median, Mode
+* Standard Deviation
+* Skewness Analysis
+* T-Test
+* Chi-Square Test
+* Confidence Interval Analysis
+
+### Customer Segmentation
+
+* Data Standardization
+* K-Means Clustering
+* Elbow Method
+* PCA Visualization
+* Cluster Profiling
+
+### Predictive Modeling
+
+* Logistic Regression
+* Train-Test Split
+* Feature Encoding
+* Model Evaluation
+
+### Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+
+### Key Findings
+
+* Customer churn is strongly influenced by contract duration and tenure.
+* Monthly charges have a significant relationship with churn behavior.
+* Customer segments reveal groups with different retention characteristics.
+* Logistic Regression successfully predicts customer churn patterns.
+* Predictive analytics can support proactive customer retention strategies.
 
 ---
 
@@ -209,6 +195,7 @@ IBM Telco Customer Churn Dataset
 * SQLite
 * SQL
 * Power BI
+* Scikit-Learn
 * Jupyter Notebook
 
 ---
@@ -217,11 +204,11 @@ IBM Telco Customer Churn Dataset
 
 ### Completed
 
-* Task 1 – Data Cleaning and Exploratory Data Analysis
-* Task 2 – SQL for Data Extraction and Analysis
-* Task 3 – Data Visualization and Dashboarding
+✅ Task 1 – Data Cleaning & Exploratory Data Analysis
+✅ Task 2 – SQL for Data Extraction & Analysis
+✅ Task 3 – Data Visualization & Dashboarding
+✅ Task 4 – Advanced Analytics & Predictive Modeling
 
 ### Upcoming
 
-* Task 4 – Advanced Analytics and Machine Learning
-* Task 5 – Final Report and Automation
+⏳ Task 5 – Final Project / Automation & Reporting
